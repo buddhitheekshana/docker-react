@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t buddhi/docker-react -f Dockerfile.dev .
 script:
-  - docker run buddhi/docker-react npm run test -- --coverage
+  - docker run -e CI=true buddhi/docker-react npm run test
